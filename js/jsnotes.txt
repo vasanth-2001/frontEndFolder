@@ -1,0 +1,20 @@
+28/11/24
+
+  * What is Javascript?
+        - it is use to add functionality into webapp.
+        - it is interpreted language.
+        - it is loosly typed language.
+
+  * why js is called loosly typed language?
+    -when we create a variable in js we can determine what type of data is contain until and unless initilize its.
+    -in the js variable we can store multiple type of data in it.
+  * how to use js?
+    -Threre are two ways to use js:
+        1.internal javascript: in html file we use script tag and in that we write js code.
+        2.external javascript: in this we create a sperate js file and import that js file in html file by using script tag.
+
+  * how to get output in js
+    1. document.write(): it will display output in html page. It will display output in sameline
+    2. window.alert():   it will display output in model popup window.
+    3. console.log():    it will display output in browser console or in terminal.
+    4.innerHTML(DOM):    it will display output inside an element. 

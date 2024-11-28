@@ -1,0 +1,110 @@
+
+HTML:
+    *it is use to create Structure of web app
+    *it is display data to user on browser
+    *it stant for hyper text markup language
+    *the latest version of html is html5
+
+    *it is tag basis language
+    <tag>
+    -in html we have two types of tag
+    1.paired tag  : <startTag> </endingTag>
+    2.unpaired tag :<singleTag>
+
+
+    *step to create html file
+    step 1:create html file filename.html or filename.html
+    step 2:write the code
+    step 3:execute it on browser
+
+
+    <!DOCTYPE html> : it tell search  engine the html type of document belongs to version
+
+    head : it contain external links and meta data in it.
+    body : write a code to display on browser.
+
+    meta data : meta tag is gives us information about data.
+
+    *Element : it contain starting tag, content, Ending tag
+        <starting tag attribute = "value"> conent </ending tag>
+    
+    attribute : - it provide additional information about tag.
+                - it always write in starting tag.
+                - it comes with key and value pairs format.
+
+    * In html we have two types of element
+        1.Block Element : -the  element which takes 100% width of its screen
+                          - it always start from new line.
+                          - ex :h1-h6 tag,li,table,form
+        2.InLine Element : - the element which takes required widtth of the screen.
+                           - it will never start on new line.
+                           -ex : b,i,u,img,a
+
+    * Type of list in html
+        - There are three types of list
+            1.Ordered List (ol):     type=> number,A,B,C,a,b,c,I,II,III,i,ii,iii
+            2.Unordered List (ul):   type=> disc,circle, square, none 
+            3.Description List (dl): There are three tag
+                                        dl : description list
+                                        dt : define term
+                                        dd :define definiton
+
+
+    *Insert images by using relative path(../ - will back to folder) 
+
+
+what is difference b/w html and html5?
+or
+what are the feature of html5?
+    ~ symantic elements introduce in html5
+        The element which has meaning in it name  (eg : header,footer,nav,main,section,aside).
+    ~ new input type,new attribute and new tag
+    ~ multimedia element introduce: we can insert video and video file.
+    ~ Html API introduce
+        * Geolocation : it return user current location.
+                        if you want to use it, gps must have install in system.
+        * Drag and Drop : grabbing an object from one location and put at another place.
+        * web-worker : it is small javascript code which execute at backend of browser without affecting its current execution.
+        * web-storage : it is use to store user data on browser.
+                        There are two types of webstorage
+                        1. Local storage : it is use to store user data for permantely.
+                        2.session storage : it is use to store user data for limited time.
+        * SSE(Server Sent Event): it allows us to get automatic update from server.
+
+
+difference b/w bold and strong?
+   During search engine,
+     bold is for bold.
+     strong for bold and also important.
+
+
+Task : In html <br> tag is use for line break.
+
+    *iframe : it is use to create sall window in webpage.
+        -we can use iframe tag for
+            1.display youtube video.
+            2.display google map location.
+            3.display one website into another website
+
+*LINK : it is use for naviagtion
+    -to create link in html we use anchor tag
+
+
+
+
+27/11/24----Day2:
+
+FORM:
+    *form : it is used to get data from user
+    - To submit form data we have two methods
+        get method : - form data will be visible in browser url.
+                     - with get method we cannot sent confidential data.
+                     - there is character limitation with get method to sent data through url.
+                     - by default every method is a get method.
+
+        post method :- form data wil be not vissible to user it will save in body object.
+                     - with post method we can submit confidential data.
+                     - there is no character limitation to submit the data.
+
+
+create a link which will you 
