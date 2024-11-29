@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = ["somu","babu","sanjay","vikram","ruban","sahabudeen"]; 
+        console.log(students);
+        console.log(students[1]);  //access array data outside
+        students[2]="sathish";      //update the data
+        console.log(students);
+        console.log("array length : ",students.length);
+        console.log("array size : ",students.length-1);
+        // how to iterate array
+        for(let i=0;i<students.length;i++){
+            document.write(students[i]+",");
+        } 
+        document.write("**********************************************")
+
+        //for of :it will return array value
+            for(let s of students){
+                document.write(s+",");
+            }
+        // for in:it will return aray index
+            for(let s in students){
+                document.write(s+",");
+            }
+        
+        
+        // 1. push(): it is use to insert values at last index of an array
+            students.push("Arun");
+            console.log(students);
+
+        // 2.pop():it is use to remove values at last index of an array
+            students.pop();
+            console.log(students);
+        //3. unshift:it is use to insert values at starting index of an array
+        students.unshift("deepak","chan");
+        console.log(students);
+         //4. shift:it is use to remove values at starting index of an array
+         students.shift();
+        console.log(students);
+
+        //5.splice(start index,deletecount,valuesToadd): it is use to insert and remove values from middle index of an array
+        students.splice(1,0,"vasanth","vinoth")
+            //insert
+        console.log(students);
+            //remove
+        students.splice(1,2)
+        console.log(students);
+            //insert and remove
+        students.splice(1,2,"ajay")
+        console.log(students);
+
+        // 6. toString() : it is use to convert array data into string --it will not affect the original arrary
+
+        console.log(students.toString());
+        //7. join(separate): it is use to convert array data into string, it take (,) and replace one parameter to separate value. --it not affect original value
+        console.log(students.join(""));
+        console.log(students.join("*"));
+        console.log(students.join("❤"));
+        console.log(students);
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

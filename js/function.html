@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1 . simple function and default function
+
+        function greeting() {
+            return "hello <br>";
+        }
+        document.write(greeting());
+        console.log(greeting());
+        let data= greeting();
+        document.write(data);
+
+        // 2. parameterized function
+        function add(num1,num2){
+            return num1+num2
+        }
+        document.write(add(5,2),"<br>");
+        document.write(add(78,52),"<br>");
+
+        // 3. anonymous function  : function with no name
+
+            let mul=function (num1,num2){
+                return num1*num2+"<br>";
+            }
+            document.write(mul(8,6));
+
+        // 4. arrow function : function with no name as well as no function keyword
+           let arrow= ()=>{
+                return 11/2+"<br>";
+            };
+            document.write(arrow());
+                //if we have one statement we use like this in arrow function
+            let div=(num1,num2)=> num1+num2+"<br>";
+            document.write(div(10,20));
+
+        // 5. optional parameterize function : function in which parameter will be optional
+            let fullname = (fname,lname,mname="")=>{
+                return fname+mname+lname+"<br>";
+            }
+            document.write(fullname("Vasanth","Rajendran",".S "));
+
+        // 6. rest parameter : when we don't know how many parameters required.in this we use spread operator
+            let stdList = (...s1)=>{
+                return s1;
+            }
+            document.write(stdList("nishanth","somu","vasanth"));
+    </script>
+</body>
+</html>

@@ -18,3 +18,91 @@
     2. window.alert():   it will display output in model popup window.
     3. console.log():    it will display output in browser console or in terminal.
     4.innerHTML(DOM):    it will display output inside an element. 
+***************************************************************************************
+
+
+
+  *Hosting : moving variable and function declaration at top of webpage.
+
+  *variable : it is use to store data in it.
+  -we can create variable in js by using var,let,const.
+
+  1.var : -it create function scope variable.
+          -we can use variable before its declaration.
+          -we can re-declare variable.
+
+  2.let : it create block scope variable.
+          -we can not use variable before its declaration.
+          -we we an not re-declare variable.
+
+  3. const : it create block-scope variable.
+            - we cant use variable before its declaration.
+           - in this when we declare a variable at same line we have initialize it.
+            -its data will never change on run time.
+
+  *exponentiation(**) :it return power of any number.
+
+  ==(equal to) :  
+      -it check value only and if both are same then it will return true value.
+      Ex:
+        5 == 5; //true
+        5 == "5" //true
+  ===(exactly equal to):
+      -it will check value as well as its dataType and if both are same then it will return true value.
+      ex:
+        5 === 5; //true
+        5 === "5"; //false
+
+
+  * DOM manupulation
+
+    function : it is block of code it is use to perform specific task.
+              - function will execute only when we call it.
+              - function can be reuse.
+    * There are mainly two types of function
+      1. pre-defined function : provide js to us.
+      2. user definec function : user developed for particular use.
+
+    Syntax : function funactionName(){
+                //logical code
+             }
+             funactionName();
+
+
+  * how to change attribute value by using DOM
+  * how to call function by using event
+  * how to acess data from input control
+
+  * Array : -it use to store multiple values with same dataType
+            - in array data store on index basis.
+            - array index allways start from zero index.
+            -we can access array values outside by writing arrayName[indexNumber]
+  * array method
+
+  *object : it is use to store multiple values with different data type.
+            -in object data store in key and value paired format.
+            -we can access object data outside  by writing object.keyName.
+            -object type of data in denoted by {}
+
+
+  *TASK:  create array of object for 10 employees have keys  id,name,post,salary,gender,age,city,state
+            1.display all 10 employee information.
+            2.display employee information who is manager
+            3.display information of all  employee whoes gender is female.
+            4.display information of all  employee whoes age > 55.
+            5.display information of those employee who belong to tamilnadu state.
+
+
+  * callback function : passing a function name as an argument inside another function is called callback function
+
+  * Date and Time : 
+            -if we want to display date and time in js first we have object of Date class.
+            -Date object return information from the user.
+              let objName= new Date();
+        
+
+  * form Validation
+
+
+  task: perfoerm form validation for, password,email,contact,gender
+            

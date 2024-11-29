@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+    <script>
+        // create object of date class
+        let dateObj= new Date();
+        document.getElementById("d1").innerHTML = dateObj;
+        document.getElementById("d2").innerHTML = dateObj.getFullYear();
+        document.getElementById("d3").innerHTML = dateObj.getDate();
+        document.getElementById("d4").innerHTML = dateObj.getHours();
+        document.getElementById("d5").innerHTML = dateObj.getDay();
+        document.getElementById("d9").innerHTML = dateObj.getMonth();
+
+        // how to set date and time
+        let newDate =new Date("2015","02","28","09","09","09");
+        document.getElementById("d7").innerHTML =newDate;
+
+        // HOW TO CREATE DIGITAL CLOCK 
+        function MyClock() {
+            let d= new Date();
+            document.getElementById("d8").innerHTML = d.toLocaleTimeString();
+        }
+        // MyClock();
+        setInterval(MyClock,1);
+
+        let today=dateObj.getDay();
+        switch (today) {
+            case 0:{
+                document.getElementById("d6").innerHTML="Today is Sunday";
+                break;
+            }
+            case 1:{
+                document.getElementById("d6").innerHTML="Today is Monday";
+                break;
+            }
+            case 2:{
+                document.getElementById("d6").innerHTML="Today is Tuesday";
+                break;
+            }
+            case 3:{
+                document.getElementById("d6").innerHTML="Today is Wednesday";
+                break;
+            }
+            case 4:{
+                document.getElementById("d6").innerHTML="Today is Thursday";
+                break;
+            }
+            case 5:{
+                document.getElementById("d6").innerHTML="Today is Friday";
+                break;
+            }
+            case 6:{
+                document.getElementById("d6").innerHTML="Today is Saturday";
+                break;
+            }
+
+            default:
+            document.getElementById("d6").innerHTML="Invalid details";
+                break;
+        }
+    </script>
+</body>
+</html>
