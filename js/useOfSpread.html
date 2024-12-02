@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let frontEnd = ["html","css","javascript","React"];
+        document.write(`${frontEnd}<br>`)
+        console.log(frontEnd);
+        
+        let backEnd = ["java","python"];
+        document.write(`${backEnd}<br>`);
+        console.log(backEnd);
+        // concat : to merge two or more array
+       let fulStack= frontEnd.concat(backEnd,"Dot net","php");
+       document.write(`${fulStack}<br>`)
+       console.log(fulStack);
+       // spread operator : to merge two or more array.
+       let fullStackTwo =[...frontEnd,...backEnd,"Dot","php"];
+       console.log(fullStackTwo);
+        
+    </script>
+</body>
+</html>

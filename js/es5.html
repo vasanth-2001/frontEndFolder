@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let std=["vasanth","nirmal","nithish","vimal"];
+        //1.forEach() : it call another method once for each array element.
+        std.forEach((val,index) => {
+            document.writeln(`${val},`);
+
+        });
+        document.write("<br>");
+        //2.map() : it call another method once for each array element and it return new array after performing manipulation with array data.
+        // let num= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        let num= [1,2,3,4,5];
+        document.writeln(`${num}<br>`)
+
+        let mul=num.map((val,index)=>{
+            return val*2;
+        });
+        document.writeln(`${mul}<br >`)
+
+        // 3. filter(): it call another method once for each array element and it return new array of those values who satisfy given condition.
+            let filterOut=num.filter((val,index)=>{
+                return val % 2!=0;
+            });
+            document.writeln(`${num}<br>`)
+            document.writeln(`${filterOut}<br >`)
+            //4. every():it call another method once for each array element and it return true value if all array element satisfy given condition.
+
+            let everyOut=num.every((val,index)=>{
+                return val>0;
+            })
+            document.writeln(`${everyOut}<br >`);
+
+        // 5. some() : it call another method once for each array element and it return true value if some of  array element satisfy given condition.
+            
+        let someOut=num.some((val,index)=>{
+                return val>99;
+            })
+            document.writeln(`${someOut}<br >`);
+
+        // reduce/reduceRight : it return array data as single value, it takes two parameter,preVal,nextVal
+
+            let add=num.reduceRight((pre,nxt)=>{
+                return pre-nxt;
+            });
+            document.writeln(`${num}<br>`);
+            document.writeln(`${add}<br>`);
+            
+    </script>
+</body>
+</html>

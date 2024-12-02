@@ -106,3 +106,81 @@
 
   task: perfoerm form validation for, password,email,contact,gender
             
+
+
+
+
+
+
+
+
+
+
+Day2:
+02/12/24:
+
+      *String and its method
+       String : it is collection of character.
+                -in string every character has index value and it start from zero.
+                -in string blank space is also considered as string.
+
+      There are three methods which index of searching string
+
+      1.indexOf(searchingString,startIndex): it will search string from left to right and return index of first occurence of string.
+                                            -if searching string is not found then it will return -1 as result.
+      2.lastIndexOf():it will search string from right to left and return index of first occurence of string.
+                                            -if searching string is not found then it will return -1 as result.
+      3.search():it will search string from left to right and return index of first occurence of string.
+                                            -if searching string is not found then it will return -1 as result.
+                                            -it is faster then indexOf().
+
+      -there are three method which return part of searching string.
+
+        1.slice(startIndex,endIndex?):  -it will return part of string from big string.
+                           optional     -if we write +ve index then will search index from left to right.
+                                        -if we write -ve index then will search index from right to left.
+
+        2.substring(startIndex,endIndex?): -it will return part of string from big string.
+                                           -if we write +ve index then will search index from left to right.
+                                           
+        3.substr(startingIndex,totalNumberOfCharacters): -it will return part of string from big string.
+                                        -if we write +ve index then will search index from left to right.
+
+
+
+        charAt(index) : it return character from index number.
+        charCodeAt(index) : it return ASCII code.
+
+        split():
+            *split(separator?): it is use to convert string data into array
+
+
+       prompt: it generate one popup window and allow us to insert value in it.
+
+       * setTimeOut:it call another method only one after particular time interval.
+       * setInterval:it call another method mutiple time after particular time interval.
+
+
+
+
+
+
+
+
+
+
+
+       *ES-5(ECMA script-2009)
+       -forEach
+       -map 
+       -filter
+       -every
+       -some
+       -reduce/reduceRight
+
+       ES-6(ECMA script-2015)
+       -let,const
+       - ...
+
+       * how to merge two or more array values.
+       * destructuring : creating constant variable to store data in it.

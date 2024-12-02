@@ -1,0 +1,51 @@
+2/12/24
+
+
+
+    TypeScript:
+        -it is super set of script.
+        -it is compile language.
+        -it is strict type language.
+
+   
+   to check node has install   cmd ----- > node -v 
+   IF Present, type
+   ------------->npm i -g typescript
+    npx tsc -v   //check typescriptversion
+
+
+    * how to ececute typescript file
+    npx tsc filename.ts  // compile ts file and create an plain js file
+
+    node filename.js  //to execute js file
+
+
+    *variable declaration in ts
+    *datatype in ts
+
+    Task : write one parameter function is ts which will take two parameters and display your fullname.
+
+    Task : WAP parameterize function which will return area of circle passing radius valuees as parameter.
+
+
+
+
+    Oops:
+
+    1-class:
+            -it is collection of data-member and member-function.
+            -it is template  which we can re-use.
+            -to create class we use class keyword
+
+            this keyword : it referes to current class or object to access its data inside it only.
+
+
+    2.object : 
+            - it is an instance of class.
+            -it allow us to access class data-member and member-function outside the class.
+            syntax : let ObjeName =new ClassName()
+
+
+    3.constructor : it is special member function of class.
+                    -it will execute automatically when class object get created or initialize.
+                    -in ts construction name must only constructor.
