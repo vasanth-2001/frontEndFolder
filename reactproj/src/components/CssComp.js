@@ -7,12 +7,13 @@ const CssComp = ()=>{
         height:true?"100px":"200px",
         borderRadius:"50%",
         border:false?"2px solid red" : "5px solid green",
-        margin: auto
+        margin:"auto"
     }
     return (
         <div>
-            {/* 1. use of internal css */}
+            {/* 1. use of inline css */}
             <h1 style={{color:'blue',backgroundColor :"aqua"}}>This is Css Componenet</h1>
+            {/* // internal */}
             <p style={circle}>Hello</p>
             {/* 2. use of external css  */}
             <div className="txtPrimary"> Hello vimal</div>

@@ -1,0 +1,10 @@
+.txtPrimary{
+    color: green;
+    font-weight: 700;
+    font-size: 20px;
+}
+.txtDanger{
+    color: tomato;
+    font-weight: 700;
+    font-size: 30px;
+}
