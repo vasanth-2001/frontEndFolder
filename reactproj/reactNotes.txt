@@ -1,0 +1,104 @@
+03/12/24
+
+*React:
+
+    -it is javascript library.
+    -it is use to create rich user interface.
+    -it create single page Application(SPA).
+
+* Technology pr-requisit
+    -html,css,js(basisjs,ESS5 and ESS6, Oops);
+
+*s/w pre-requisit
+-nodejs
+-editor(vscode)
+
+* how to create react project
+    There are three ways to create react project
+        1.by using npm:need to install configuration file.
+            step 1: npm install -g create-react-app
+            step 2: create-react-app my-app
+
+        2.by using npx: no need to install configuration file.
+        3.by using vite: it create project with minimum package.
+
+
+
+*react folder structure
+-node_modules: all the dependencies and dev-dependencies will install in this folder.
+-package.json: all the dependencies entry will found.
+-package-lock.json: detail description of file you will found here.
+-README.md : it is guide file how to use react project.
+-public: it contain static data an idle in it.
+
+*react is component basis Technology
+-component : it is partial part of react project.
+            -which we can reuse throughout react project.
+            -it can be any ppart of react project.
+
+-in react App.js is root component.
+render- displaying component output.
+component-it is any part of your html file.
+
+
+-in react we have two types of component
+    1.function component: when your main focus is on UI design.
+    2.class component:when you have to implement complex logic in thst case we use it.
+
+* how to displlay component output
+* JSX(javascript+XML):
+    -it allows us to write html code in react.
+    -it makes react code easy,in jsx we have wrap multiple element inside one parent element.
+    -parent element must be any block element like div,h1-h6,p etc.
+
+*props :
+    -it is parameter or functional parameter which is use pass data inside compenent.
+    -props return data in object format.
+    -we can access props in function compenent by writing props.propsName. 
+    -we can access props in class compenent by writing this.props.propsName. 
+
+    Task-1 : VasanthFunCom  : create component and display output
+    Task-2 : VasanthFunCom  : write  props with fname,lname,salary,gender,address and display its value.
+
+    *method and events in react
+
+    *state :
+    -it is use to handle essential in class component.
+    -it return us object type of data.
+    -in class component we write state inside constructor.
+    -if you want to use state in function component for that we use useState Hook.
+
+
+    *setState : it is use to manipulate state data inside class component.
+    
+    Task : create a class compenent with name MyCounterComp having state with property count=0,
+            you have to implement logic to increment,decrement and reset count value after click three button.
+
+    * how to use bootstrap in react
+    step 1 : npm i bootstrap
+    step 2 : go to index.js file import the path
+    step 3 : use bootstrap class.
+
+    render : display component output or view on browser
+    *conditional Renedering :
+            -display component on the basis conditional
+            1.use of if else: if condition is true then if block will execute otherwise else block.
+            2.element as variable : in variable we store data and display inside tag and return it.
+            3.use of ternary operator: short hand syntax for if else
+                                        (condition) ? turepart :falsepart;
+            4.use of short-circuit: if condition is true then and only then it display count.
+
+
+
+
+*how to use css in react
+    -There are three ways to use css:
+        1.internal css:
+        2.External css:
+        3.module css:it is use when we have write design for perticular component.
+                    -we save 
+
+
+    MyStateComp
+
+    EventComp()

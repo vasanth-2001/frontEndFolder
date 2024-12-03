@@ -49,3 +49,40 @@
     3.constructor : it is special member function of class.
                     -it will execute automatically when class object get created or initialize.
                     -in ts construction name must only constructor.
+
+****************************************************************************************************************
+
+
+03/12/24
+
+* Inheritance
+-accessing parent class property into child class.
+-to perform inheritance in between class we use extends keywords.
+
+*super() :
+-it represent parent class constructor inside child class constructor.
+-super method must be first statement in child class constructor.
+
+
+4> Encapsulation:
+-wrapping of data into single unit.
+ 
+-access modifier:
+        *public: we can access class property inside and outside class as well as in derived(child) class.
+        *protected: we can access class property inside  same class as well as in derived(child) class.
+        *private:we can access class property inside same class only.
+5.ploymorphism:
+-it is ability to take more than one form.
+        -method overloading: when we have multiple method with same name in same class.
+        -method overriding: when we have multiple method with same name in different class.
+
+6.abstraction:
+        -hidding implementation and showing necessary information.
+        -we can achieve this by using interface,abstract class.
+
+
+*module:
+        -writting ts code in single or mutliple file and access it in another file.
+        -to achice this we use export and inport keyword.
+        -to send data we use export.
+        -to access it we use import.
