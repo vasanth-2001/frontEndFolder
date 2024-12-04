@@ -99,6 +99,47 @@ component-it is any part of your html file.
                     -we save 
 
 
-    MyStateComp
+===================================================================================================
 
-    EventComp()
+04/12/24
+
+*Fragment in React : 
+    -it is an alternative option for jsx.
+    -it remove unwanted element from DOM heirarvhy.
+
+*component interation :
+    -accessing data from parernt component to child component.
+    -while performing component interaction in between component they must have parent child relation.
+    -how establish parent child relation in between component,first we have to import child component in parent component 
+    and then write child component name as tag in parent component.
+
+*passing state data as props 
+*passing function data as props 
+Task :ParentComp (cc) : state empName,empSal and display output write method to manipulate state property.
+                        pass props and access gender,contact.
+
+*Pure Component :
+    -it is use to prevent un-necessary re- rendering class component by preforming shallow comparision.
+    -to achieve this we have to extends class component with pureComponent class.
+
+*React.Memo ():
+     -it is use to prevent un-necessary re- rendering class component by preforming shallow comparision.
+     -to achieve this we have to pass function component name as an argument with React.Memo() Method.
+
+*HOC(Higher order component):
+    -when we have to share same bussiness logic with multiple component in that case we use it.
+    -in this we share bussiness logic from function component to class or function component.
+
+*Error Boundary:
+    -it is react component which is use to handle error occur in component three while rendering component.
+    -to handle it we use two class component life cycle method
+        1. getDerivedStateFromError(): when error occur in component it execute automatically.
+        2.componentDidCatch(): it will display Error log(error information).
+
+
+*VirtualDOM :
+
+ 
+
+
+*MyIma

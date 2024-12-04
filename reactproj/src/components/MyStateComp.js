@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class MyStateComp extends Component {
     constructor() {
@@ -16,13 +16,13 @@ class MyStateComp extends Component {
 
     render() {
         return (
-            <div>
+            <Fragment>
                 <h2>this is MyStateComp</h2>
                 <p>Employee Name: <strong>{this.state.empName}</strong><br/>
                     Employee salary: <strong>{this.state.empSal}</strong>
                 </p>
                 <button type="button" className="btn btn-primary" onClick={() => this.changeStateData()}>Change state data</button>
-            </div>
+            </Fragment>
         )
     }
 }

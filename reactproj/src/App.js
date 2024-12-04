@@ -7,6 +7,14 @@ import EventComp from './components/EventComp';
 import MyStateComp from './components/MyStateComp';
 import ConditionalRenComp from './components/ConditionalRenComp';
 import CssComp from './components/CssComp';
+import ParentComp from './components/ParentComp';
+import ClickCounterComp from './components/ClickCounterComp';
+import HoverCounterComp from './components/HoverCounterComp';
+import MyImagesComp from './components/MyImagesComp';
+import UserComp from './components/UserComp';
+import ErrorBoundaryComp from './components/ErrorBoundaryComp';
+import VirtualDOM from './components/VirtualDOM';
+
 
 function App() {
   return (
@@ -26,13 +34,32 @@ function App() {
         </a>
       </header> */}
       {/* <h1> Welcome to India</h1>
-      <FuncComp fname="vasanth" post="Developer"/> */}
-      {/* <VasanthFunCom fname="Nithish" lname="Kumar" salary={98000} gender="Male" address="UK" /> */}
-      {/* <ClassComp fname="Nirmal" post="Quality"/> */}
-      {/* <EventComp/>
+      <FuncComp fname="vasanth" post="Developer"/>
+      <VasanthFunCom fname="Nithish" lname="Kumar" salary={98000} gender="Male" address="UK" />
+      <ClassComp fname="Nirmal" post="Quality"/>
+      <EventComp/>
       <MyStateComp/> */}
-      <ConditionalRenComp/>
-      <CssComp/>
+      {/* <ConditionalRenComp/> */}
+      {/* <CssComp/> */}
+      {/* <ParentComp gender="MAle" contact={887688765}/> */}
+      {/* <ClickCounterComp/> */}
+
+      {/* <HoverCounterComp/> */}
+      {/* <MyImagesComp></MyImagesComp> */}
+      {/* <ErrorBoundaryComp>
+      <UserComp user="vasanth"/>
+      </ErrorBoundaryComp>
+      <ErrorBoundaryComp>
+      <UserComp user="Somu"/>
+      </ErrorBoundaryComp>
+      <ErrorBoundaryComp>
+      <UserComp user="Arun"/>
+      </ErrorBoundaryComp>
+      <ErrorBoundaryComp>
+      <UserComp user="Vishwa"/>
+      </ErrorBoundaryComp> */}
+      <VirtualDOM/>
+      
     </div>
   );
 }
