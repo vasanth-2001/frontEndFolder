@@ -138,8 +138,131 @@ Task :ParentComp (cc) : state empName,empSal and display output write method to 
 
 
 *VirtualDOM :
+    insead of manipulationg browser dom directly react creates virtual dom in it memory,
+    where it does all the necessary changes before making on the browser DOM.
+    react render the code which needs to be render only that why react is faster.
+*render array of object data in list.
+*render array data in select option.
 
- 
+
+Task 1: create class component with name ToogleImgComp and toggle image after click on single button.
+Task 2:reate class component with name MultipleImgComp and display multiple image after click on multiple button.
+Task 3: create class component with name EmpDetails having state with array of object data. emp containing property like empid,empname,emppost,empsalary,
+        empcontact,empaddress for 10 employees and display data in table format.
 
 
-*MyIma
+
+
+=====================================================================================================
+
+
+05/12/24
+
+*routing of component   
+    -navigation of component/
+    -by writing routing path name in browser url to display component output or view.
+    -we use react-router-dom library in react to perform routing
+
+    * how to install react-router-dom
+        npm install react-router-dom@6
+
+
+    1.createBrowserDOM(): it is a method which takes array of type of data.
+                          - in its object we use two property path,element.
+                          -in this method we define all types of routing.
+    2.RouterProvider():it helps us to render output of all routing component on browser.
+
+
+
+    *Types of routing
+        1.naming routing:display component output after writing component routing pathname in browser url.
+        2.default routing: display component output without routing path name.
+        3.parametrize routing: display component output after passing parameter with routing path name.
+        4.child routing: display one routing inside another routing
+                        -to perform child routing we use children property in object which array of object value.
+                        -to display child routing output we have to add <Outer> library in parent routing component.
+        5.wild-card routing(*): when user write wrong path name in browser url then we decide what component output should display.
+        -in wild-card routing path we write path value as *
+        -wild-card-routing always write at last,it below routing wil never work.
+
+
+
+
+    * how to create layout for react project
+
+    *Class component LifeCycle method.
+    -it comes with four phases
+    1.Mounting Phase: when component initialize
+        -constructor:when class object initialize constructor get execute automatically.
+        -getDerivedStateFromError: it is static method which execute automatically,and it is use to set value coming from props to state.
+        -render:it is resposible to render component data.
+        -componentDidMount: it will execute immediately after render method.
+    2.Update Phase:When Dom manipulation is done
+        -shouldComponentUpdate: it decides wheather component will update or not. 
+                                -it return boolean value, if true then component will upadte.
+        -getSnapShotbeforeUpdate:it return previous data of props and state before updation of it.
+        -render:it is resposible to render component data.
+        -componentWillUpdate:it will return updated values of state and props
+    3.Unmounting Phase: when component is deleted
+        -componentWillunmount : it just call before component deleted, it is use to disconnect component connection with other component.
+    4.Error Phase:
+        -getDerivedStateFromError(): it execute automatically when error occur in components.
+        -componentDidCatch(): it return error log.
+
+
+    *Hooks In React :
+        -it allows us to use class component feature in function component.
+        -by using hooks we can use state in function component.
+        -in react hooks introduce in react version-16.
+
+    *rules to use hooks
+        -hooks work only in function component.
+        -hooks always use in top-level component.
+        -hooks can not be render conditionally.
+
+    1.useState Hook :
+    2.useEffect Hook :
+    3.useContext Hook :
+    4.useRef Hook :
+    5.useReducer Hook :
+    6.useCallback Hooks:
+    7.useMemo Hooks:
+
+
+    *useState Hook :
+        -if yout wan to use state in function compenent fo that you have to use useState Hook.
+        -it return two value,
+            1.currentState,
+            2.function-to-update-stateData.
+        -before using it import it first from react library.
+        Syntax:  const [currentState,functionToUpdateState] = useState(vale); 
+
+        *useEffect Hook:it will execute after component render data.
+            -it will handle work of componentDidMount,componentDidUpdate,componentWillunmount in function.
+            -it takes two values 
+                1.callback function,
+                2.dependencies
+            -Syntax : useEffect(()=>{},[dependencies]);
+
+            case 1: when no dependencies values
+                    -use effect will execute after every render.
+                    Syntax :useEffect((=>{}));
+            case 2: when we pass dependencies value as blank array
+                    -useEffect hook will execute only once.
+                    Syntax: useEffect(()=>{},[]);
+            case 3: when we have to execute useEffect hook as we want.
+                    -we pass value in dependencies
+                    Syntax: useEffect(()=>{},dependencies)
+
+        
+
+
+
+
+
+    *React/Reduct extension:
+
+    -rfce:create normal function component.
+    -rafce: create arrow function component.
+    -rce:create class compenent.
+    -rconst: it create constructor with super method and state

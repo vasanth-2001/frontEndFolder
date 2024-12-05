@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let msg="Welcome you all In changepond you all are future of changepond";
+        let msg = "Welcome you all In changepond you all are future of changepond";
         document.write(`${msg} ${msg.length}<br>`);
         document.write(` ${msg.toUpperCase()}<br>`);
         document.write(` ${msg.toLowerCase()}<br>`);
 
         // use of indexOf()
         document.write(`msg.indexOf("all"): ${msg.indexOf("all")}<br>`);
-        document.write(` msg.indexOf("all",16):${msg.indexOf("all",16)}<br>`);
+        document.write(` msg.indexOf("all",16):${msg.indexOf("all", 16)}<br>`);
         //use of lastIndexOf()
         document.write(`msg.lastIndexOf("you"):${msg.lastIndexOf("you")}<br>`);
-        document.write(`msg.lastIndexOf("you",28): ${msg.lastIndexOf("you",28)}<br>`);
+        document.write(`msg.lastIndexOf("you",28): ${msg.lastIndexOf("you", 28)}<br>`);
         //search()
         document.write(`msg.search("Changepond"): ${msg.search("Changepond")}<br>`);
         document.write(`msg.search("US"): ${msg.search("US")}<br>`);
 
         //use of slice()
         document.write(`msg.slice(8): ${msg.slice(8)}<br>`);
-        document.write(`msg.slice(8,19): ${msg.slice(8,19)}<br>`);
-        document.write(`msg.slice(-10,-8): ${msg.slice(-10,-8)}<br>`);
+        document.write(`msg.slice(8,19): ${msg.slice(8, 19)}<br>`);
+        document.write(`msg.slice(-10,-8): ${msg.slice(-10, -8)}<br>`);
 
 
         //use of subString()
         document.write(`msg.substring(10): ${msg.slice(10)}<br>`);
-        document.write(`msg.substring(10,25): ${msg.slice(10,25)}<br>`);
+        document.write(`msg.substring(10,25): ${msg.slice(10, 25)}<br>`);
         //use of substr
         document.write(`msg.substr(10): ${msg.substr(10)}<br>`);
-        document.write(`msg.substr(10,25): ${msg.substr(10,25)}<br>`);
+        document.write(`msg.substr(10,25): ${msg.substr(10, 25)}<br>`);
 
 
         //use of charAt()
@@ -41,17 +43,18 @@
         document.write(`msg.charCodeAt(0):${msg.charCodeAt(0)}<br>`)
 
         //use of replace()
-        document.write(`msg.replace("Changepond","India"):${msg.replace("changepond","India")}<br>`) //it will check the case and if match it replace fist occurence
-        document.write(`msg.replace(/Changepond/i,"India"):${msg.replace(/Changepond/i,"India")}<br>`)//it will not check case and replace fisrt occurence
-        document.write(`msg.replace(/Changepond/ig,"India"):${msg.replace(/Changepond/ig,"India")}<br>`);//it will not check case and replace in all occurence
-        document.write(`msg.replaceAll("Changepond","India"):${msg.replaceAll("Changepond","India")}<br>`);//it check the case and replace all value. 
-        
+        document.write(`msg.replace("Changepond","India"):${msg.replace("changepond", "India")}<br>`) //it will check the case and if match it replace fist occurence
+        document.write(`msg.replace(/Changepond/i,"India"):${msg.replace(/Changepond/i, "India")}<br>`)//it will not check case and replace fisrt occurence
+        document.write(`msg.replace(/Changepond/ig,"India"):${msg.replace(/Changepond/ig, "India")}<br>`);//it will not check case and replace in all occurence
+        document.write(`msg.replaceAll("Changepond","India"):${msg.replaceAll("Changepond", "India")}<br>`);//it check the case and replace all value. 
+
         //split(separator:)
         console.log(`${msg}<br>`);
         console.log(msg.split());
-        console.log(msg.split(" ") );
-        console.log(msg.split("") );
-        
+        console.log(msg.split(" "));
+        console.log(msg.split(""));
+
     </script>
 </body>
+
 </html>

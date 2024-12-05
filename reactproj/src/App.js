@@ -14,6 +14,9 @@ import MyImagesComp from './components/MyImagesComp';
 import UserComp from './components/UserComp';
 import ErrorBoundaryComp from './components/ErrorBoundaryComp';
 import VirtualDOM from './components/VirtualDOM';
+import EmpDetailsComp from './task/EmployeeDetailsComp';
+import MultipleImgComp from './task/MutlipleImgComp';
+import ToggleImgComp from './task/ToggleImgComp';
 
 
 function App() {
@@ -58,7 +61,10 @@ function App() {
       <ErrorBoundaryComp>
       <UserComp user="Vishwa"/>
       </ErrorBoundaryComp> */}
-      <VirtualDOM/>
+      {/* <VirtualDOM/> */}
+      <EmpDetailsComp></EmpDetailsComp>
+      <MultipleImgComp></MultipleImgComp>
+      <ToggleImgComp></ToggleImgComp>
       
     </div>
   );
