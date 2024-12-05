@@ -255,6 +255,13 @@ Task 3: create class component with name EmpDetails having state with array of o
                     Syntax: useEffect(()=>{},dependencies)
 
         
+    TAsk : create a new react project for jwellary shop with four component Home,About,Products,contact
+
+            Home : information of shop
+            About : History of shop,owner info,patners
+            Product : display product images and one table pname,pprice
+            Contact:display contact form with validation having fields
+            name,email,contact,feedback,one google map location of shop
 
 
 
