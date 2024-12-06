@@ -2,9 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 
 const FormValComp = () => {
+    let mycourses =["React","Java","Angular","Python","DotNet"];
     const [user,setUser] = useState({
         fname : "",
         term :false,
+        course:""
     })
     const changeInput = (event)=>{
         // console.log(event.target.type);
@@ -23,6 +25,10 @@ const FormValComp = () => {
                 window.alert("fullname must contain only character min-3 and max-20");
                 return false;
             }
+            if (user.course==="") {
+                window.alert("course field is required");
+                return false;
+            }
             if(user.term===false){
                 window.alert("please accept term and condition");
                 return false;
@@ -38,6 +44,17 @@ const FormValComp = () => {
             <div>
             <label>Enter your First Name :</label>
             <input type='text' name='fname' onChange={changeInput} value={user.fname}/>
+            </div>
+            <div>
+                <label>Select your Courses</label>
+                <select name='course' onChange={changeInput}>
+                    <option value="">select your course</option>
+                    {
+                        mycourses.map((val,index)=>{
+                            return <option value={val} key={index}>{val}</option>
+                        })
+                    }
+                </select>
             </div>
             <div>
             <input type='checkbox' name='term' onChange={changeInput} value={user.term}/>Accept terms and condition
