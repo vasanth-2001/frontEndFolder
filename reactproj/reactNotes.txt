@@ -310,3 +310,14 @@ Axios Library
     * how to install material icon
         npm install @mui/icons-material
     *get request : to fetch data from server
+
+
+
+    UseNavigate : it is use to perform automatic navigation.
+    UseParams : it is used to fetch parameter from browser url.
+
+
+    *done get request successfullly.
+    *done post request successfullly.
+    *done put request successfullly.
+    
