@@ -12,6 +12,9 @@ import MainDashboardComp from "../layout/MainDashboardComp";
 import LoginComp from "../layout/LoginComp";
 import MyFavColorComp from "../components/MyFavColorComp";
 import FormValComp from "../components/FormValComp";
+import ProductDashComp from "../CRUD/productDashComp";
+import ProductAddComp from "../CRUD/productAddComp";
+import ProductEditComp from "../CRUD/ProductEditComp";
 
 const routing = createBrowserRouter([
     {path:"",element:<LoginComp/>},
@@ -23,6 +26,9 @@ const routing = createBrowserRouter([
             { path: "", element: <VirtualDOM /> },
             {path:"favcolor",element:<MyFavColorComp newColor="Green"/>},
             {path:"formval",element:<FormValComp/>},
+            {path:"productdash",element:<ProductDashComp/>},
+            {path:"productadd",element:<ProductAddComp/>},
+            {path:"productedit/:id",element:<ProductEditComp/>},
             //naming routing
             { path: "virtualdom", element: <VirtualDOM /> },
             //parametrize routing
@@ -36,6 +42,7 @@ const routing = createBrowserRouter([
             },
             { path: "event", element: <EventComp /> },
             { path: "mycss", element: <CssComp /> },
+            
         ]
     },
 

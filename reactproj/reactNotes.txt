@@ -273,3 +273,40 @@ Task 3: create class component with name EmpDetails having state with array of o
     -rafce: create arrow function component.
     -rce:create class compenent.
     -rconst: it create constructor with super method and state
+
+
+
+
+
+    ===============================================================================================================
+    06/12/24
+
+Axios Library
+    * validation for dropdown:
+
+    * CRUD
+    -REST Fake API
+    -Axios Library: it is use to make request from React app to server.
+        -how to install Axios
+            npm i axios
+    * json-server: it is dummy server,which server environment to database.
+        npm i json-server
+    *json database
+    
+
+    *How to start and json-server and upload db.json
+    cd src/shared/database(press enter)
+    npx json-server --watch -p 8080 db.json(press enter)
+
+
+    *MAterial UI :
+        -it provides inbuilt react component,which makes react project attractive.
+        -as well as it provide icon.
+
+        -its office website is www.mui.com
+
+    *how to install mui
+        npm install @mui/material @emotion/react @emotion/styled
+    * how to install material icon
+        npm install @mui/icons-material
+    *get request : to fetch data from server
