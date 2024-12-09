@@ -330,8 +330,8 @@ Axios Library
 
 *prtoected routing
 webstorage
-JWT(Json web token)
-Unit testing
+JWT(Json web token)-----pending
+Unit testing------------pending
 
 
 
@@ -365,3 +365,35 @@ npm run build
 
 * how to run build file
 serve -s build
+
+
+
+
+*what is testing in React 
+
+   
+
+    unit-testing
+    two software needed :
+    *nodejs  find :  node --v
+    *git   :  git --v
+
+
+    -with react two library comes for testing:
+     1) react-testing: it is use to execute or run test program
+    2) jest : it is test runner or it provide platform to run testcases
+
+    * How to create testing component 
+        componentName.test.js
+
+    TDD(Test Driven Development) : it is software testing process,in which test case before developemnt
+
+    *to perform testing in react need to write:
+            npm run test
+
+    test("msg",function) method : 
+        -it is the method which is used to perform unit testing
+        -it takes two parameter :
+            1.message : in this message developer write what is going to perform in short.
+            2.function : in function write testing code.
+            

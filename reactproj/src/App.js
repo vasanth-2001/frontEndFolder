@@ -17,6 +17,7 @@ import VirtualDOM from './components/VirtualDOM';
 import EmpDetailsComp from './task/EmployeeDetailsComp';
 import MultipleImgComp from './task/MutlipleImgComp';
 import ToggleImgComp from './task/ToggleImgComp';
+import MyNameComp from './testing/MyNameComp';
 
 
 function App() {
@@ -62,9 +63,10 @@ function App() {
       <UserComp user="Vishwa"/>
       </ErrorBoundaryComp> */}
       {/* <VirtualDOM/> */}
-      <EmpDetailsComp></EmpDetailsComp>
+      {/* <EmpDetailsComp></EmpDetailsComp>
       <MultipleImgComp></MultipleImgComp>
-      <ToggleImgComp></ToggleImgComp>
+      <ToggleImgComp></ToggleImgComp> */}
+      <MyNameComp/>
       
     </div>
   );
