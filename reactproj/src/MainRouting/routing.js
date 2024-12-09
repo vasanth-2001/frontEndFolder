@@ -15,18 +15,24 @@ import FormValComp from "../components/FormValComp";
 import ProductDashComp from "../CRUD/productDashComp";
 import ProductAddComp from "../CRUD/productAddComp";
 import ProductEditComp from "../CRUD/ProductEditComp";
+import ProtectedRouting from "./ProtectedRouting";
+import MyCorousalComp from "../components/MyCorousalComp";
+// import LogoutComp from "../layout/LogoutComp";
 
 const routing = createBrowserRouter([
     {path:"",element:<LoginComp/>},
     {path:"login",element:<LoginComp/>},
 
     {
-        path: "mainDashboard", element: <MainDashboardComp />, children: [
+        // path: "mainDashboard", element: <MainDashboardComp />, children: [
+        path: "mainDashboard", element: <ProtectedRouting Component={MainDashboardComp} />, children: [
             // deafault routing
             { path: "", element: <VirtualDOM /> },
             {path:"favcolor",element:<MyFavColorComp newColor="Green"/>},
             {path:"formval",element:<FormValComp/>},
             {path:"productdash",element:<ProductDashComp/>},
+            {path:"carousal",element:<MyCorousalComp/>},
+            // {path : "logout",element:<LogoutComp/>},
             {path:"productadd",element:<ProductAddComp/>},
             {path:"productedit/:id",element:<ProductEditComp/>},
             //naming routing
@@ -42,13 +48,13 @@ const routing = createBrowserRouter([
             },
             { path: "event", element: <EventComp /> },
             { path: "mycss", element: <CssComp /> },
-            
+
         ]
     },
 
     //wild- card routing
     // {path:"*",element:<MyPureComp></MyPureComp>}
-    {path:"*",element:<PageNotFound/>}
+    // {path:"*",element:<PageNotFound/>}
 ]
 
 )

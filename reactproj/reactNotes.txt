@@ -321,3 +321,47 @@ Axios Library
     *done post request successfullly.
     *done put request successfullly.
     
+
+
+=====================================================================================================
+
+
+09/12/24
+
+*prtoected routing
+webstorage
+JWT(Json web token)
+Unit testing
+
+
+
+
+concurrentlly 
+
+    step:1 :npm i -g concurrently
+
+    step 2: go to package.json in script part
+
+"json-server":"cd/src/shared/database" && json-server --watch -p 8080 db.json
+"start-dev":"start": "concurrently \"npm start\" \"npm run json-server\""
+
+step 3: terminate all server 
+npm install
+
+
+
+
+*bootstrap : it provide inbuilt classes.
+*react-bootstrap : it provide inbuilt component
+npm install react-bootstrap bootstrap
+
+*MUI : it provides inbuilt UI component
+
+
+*how to use model popup
+
+*how to create build file of reacy project
+npm run build
+
+* how to run build file
+serve -s build

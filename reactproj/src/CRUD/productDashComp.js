@@ -5,9 +5,18 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import { Link } from 'react-router-dom';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { Modal,Button } from 'react-bootstrap';
 
 const ProductDashComp = () => {
     const [product,setProduct] =useState([]);
+    const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = (val) =>{
+     setShow(true);
+     setShow(val);
+  };
     useEffect(()=>{
         // axios.get("http://localhost:8080/products").then((res)=>{
         //     console.log(res.data);
@@ -67,6 +76,9 @@ const ProductDashComp = () => {
                             <td>{val.pcompany}</td>
                             <td>{val.pquantity}</td>
                             <td>
+                                <button type='button' className='btn'  onClick={()=>handleShow(val)}>
+                                    <VisibilityIcon/>
+                                </button>
                             <Link to={`/mainDashboard/productedit/${val.id}`}  className='btn btn-outline-success btn-sm'>
                                 <EditIcon/>
                             </Link>
@@ -80,6 +92,28 @@ const ProductDashComp = () => {
                 }
             </tbody>
         </table>
+        <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>{show.pname}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+         <span>Name : </span><strong>{show.pname}</strong><br/>
+         <span>price : </span><strong>{show.price}</strong><br/>
+         <span>company : </span><strong>{show.pcompany}</strong><br/>
+         <span>quantity : </span><strong>{show.pquantity}</strong>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary">Understood</Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }
