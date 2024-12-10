@@ -17,6 +17,7 @@ import ProductAddComp from "../CRUD/productAddComp";
 import ProductEditComp from "../CRUD/ProductEditComp";
 import ProtectedRouting from "./ProtectedRouting";
 import MyCorousalComp from "../components/MyCorousalComp";
+import DataListComp from "../reduxCode/api/DataListComp";
 // import LogoutComp from "../layout/LogoutComp";
 
 const routing = createBrowserRouter([
@@ -32,6 +33,7 @@ const routing = createBrowserRouter([
             {path:"formval",element:<FormValComp/>},
             {path:"productdash",element:<ProductDashComp/>},
             {path:"carousal",element:<MyCorousalComp/>},
+            {path:"datalist",element:<DataListComp/>},
             // {path : "logout",element:<LogoutComp/>},
             {path:"productadd",element:<ProductAddComp/>},
             {path:"productedit/:id",element:<ProductEditComp/>},

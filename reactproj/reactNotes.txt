@@ -397,3 +397,80 @@ serve -s build
             1.message : in this message developer write what is going to perform in short.
             2.function : in function write testing code.
             
+
+
+
+
+
+
+
+=============================================================================================
+
+
+describe(msg,function) : it is use to group multiple test case.
+
+*coverage :it is tracking process it will tell as how much code  cover  while performing test.
+
+*how to generate test coverage files:
+    step 1: go to package,json and write in script tag.
+        script:{
+             "coverage":"jest --coverage --watchAll"
+        }
+
+    step 2 : in the package.json file add jest coverage code.
+     "jest":{
+        "collectCoverage":true,
+        "coverageDirectory":"coverage",
+        "coverageReporters":["json","lcov","text","clover"],
+        "coverageThershold":{
+            "global":{
+                "branches":80,
+                "functions":80,
+                "lines":80,
+                "statements":80
+      }
+    }
+  },
+
+    step 3:in terminal write command
+                npm run coverage
+
+
+
+
+
+    *work flow of jwt token
+
+
+
+    *redux: 
+        redux is used to store, manage, track the states for javascript application.
+        (OR)
+        -it is  predictable state container for javascript application.
+
+        -redux work on three core principle.
+            1.store(Bank):it is use to store state in it.
+            2.action(withdraw,deposit,transfer):it is simple statement which are going to perform.
+            3.reducer(cashier):it actually carryout state transistion depending on state and action and it return new state.
+
+    *react project
+    *redux library
+        -reduxtoolkit
+    *react-redux library: it is use to connect react app with redux or reduxtoolkit
+
+    *how to install redux toolkit:
+        npm install @reduxjs/toolkit
+
+    *how to install react-redux library
+        npm install react-redux
+
+
+    *useDispatch(): in function component if you want to access or call action from redux for that we use it.
+    *useSelector():it allows us to access state from redux
+    
+
+
+    *JWT token 
+    *comman functionality
+
+    for customise headere we use interceptor

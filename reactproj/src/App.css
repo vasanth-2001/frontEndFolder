@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,159 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+
+.home {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+h1 {
+  color: #6c757d;
+}
+
+p {
+  color: #343a40;
+  font-size: 18px;
+}
+
+
+
+
+.about {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+h1, h2 {
+  color: #6c757d;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+
+.products {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  color: #6c757d;
+}
+
+h2 {
+  margin-top: 40px;
+  color: #6c757d;
+}
+
+table {
+  margin-top: 40px;
+}
+
+
+
+
+
+.contact {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+h1, h2 {
+  color: #6c757d;
+}
+
+form {
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+.google-map {
+  width: 100%;
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+/* App.css */
+
+/* General styling for the navbar */
+.navbar {
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #f8f9fa !important;
+  text-transform: uppercase;
+}
+
+/* Hover effect for links */
+.nav-link {
+  font-size: 1.1rem;
+  margin-right: 20px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+  text-decoration: underline;
+}
+
+/* Navbar button */
+.navbar .btn {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.navbar .btn:hover {
+  background-color: #ffc107;
+  color: #343a40;
+}
+
+/* Responsive Navbar */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+/* Style for the active link */
+.nav-link.active {
+  color: #ffc107 !important;
+  text-decoration: underline;
+}
+
+/* Sticky Navbar */
+body {
+  padding-top: 56px; /* Adjust for fixed navbar */
 }

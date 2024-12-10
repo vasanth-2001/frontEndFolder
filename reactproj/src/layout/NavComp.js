@@ -21,7 +21,8 @@ const NavComp = () => {
     <Link to="productdash" className='btn btn-primary btn-sm'>ProductDash</Link>{" "}
     {/* <Link to="productadd" className='btn btn-primary btn-sm'>ProductAdd</Link>{" "} */}
     {/* <Link to="productedit" className='btn btn-warning btn-sm'>ProductEdit</Link> */}
-    <Link to="carousal" className='btn btn-primary btn-sm' >My Carousal</Link>
+    <Link to="carousal" className='btn btn-primary btn-sm' >My Carousal</Link>{" "}
+    <Link to="datalist" className='btn btn-primary btn-sm' >DataList</Link>
     <Link    onClick={()=>logoutUser()} className='btn btn-danger btn-sm' style={{float:"right"}} >
     <LogoutIcon/>
     </Link>
