@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import './loginComp.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import {POST} from '../shared/service/HTTP.Service'
 const LoginComp = () => {
 
     const nav = useNavigate();
@@ -10,6 +11,10 @@ const LoginComp = () => {
   const checkUser =()=>{
     let uid = uidRef.current.value;
     let upass = upassRef.current.value;
+    let empObj ={
+      userid:uid,
+      userpass:upass
+    }
     
     axios.get("http://localhost:8080/user").then((res)=>{
       // console.log(res.data);
@@ -27,6 +32,17 @@ const LoginComp = () => {
 
       }
     }).catch((error)=>{})
+
+
+      // code for AWT token
+      
+      // POST("http://localhost:8080/user",empObj).then((response)=>{
+      //   if (response.access) {
+      //     handleSnackbarOpen("Login Successfully","success");
+      //     sessionStorage.setItem("access Token",response?.access);
+      //     nav()
+      //   }
+      // }).catch((error)=>{})
   }
   return (
     <div className='loginContainer'>

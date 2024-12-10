@@ -474,3 +474,26 @@ describe(msg,function) : it is use to group multiple test case.
     *comman functionality
 
     for customise headere we use interceptor
+
+
+
+
+
+
+
+
+
+    ===============================================================
+
+* How to create angular project
+    strep 1: 
+    npm install -g @angular/cli //install angular
+    step 2:
+    ng new projectname   // to create project
+step 3: enter into directory
+
+    cd angProject
+
+step 4:
+    ng serve
+    no
