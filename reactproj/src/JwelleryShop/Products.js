@@ -1,10 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Card, Table } from 'react-bootstrap';
+import chain from './download.jpg'
+import ring from './download (1).jpg'
+import bracelet from './download (2).jpg'
 
 const products = [
-  { pname: 'Gold Necklace', pprice: '$500',pimage: 'https://example.com/gold-necklace.jpg' },
-  { pname: 'Diamond Ring', pprice: '$1500' },
-  { pname: 'Silver Bracelet', pprice: '$250' },
+  { pname: 'Gold Necklace', pprice: '₹250000',pimage: chain },
+  { pname: 'Diamond Ring', pprice: '₹350000',pimage: ring },
+  { pname: 'Silver Bracelet', pprice: '₹2250',pimage:bracelet },
 ];
 
 const Products = () => {
@@ -18,7 +21,8 @@ const Products = () => {
               {products.map((product, index) => (
                 <Col md={4} key={index}>
                   <Card className="mb-4">
-                    <Card.Img variant="top" src={`https://via.placeholder.com/150?text=${product.pname}`} />
+                    {/* <Card.Img variant="top" src={`https://via.placeholder.com/150?text=${product.pname}`} /> */}
+                    <img src={product.pimage}/>
                     <Card.Body>
                       <Card.Title>{product.pname}</Card.Title>
                       <Card.Text>{product.pprice}</Card.Text>

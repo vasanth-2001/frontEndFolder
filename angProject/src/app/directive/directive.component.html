@@ -1,0 +1,33 @@
+<p>directive works!</p>
+<!-- use of *ngIf -->
+<h2 *ngIf="isCond1" [ngStyle]="myStyle">Use of *ngIf Directive with condition 1</h2>
+<h2 *ngIf="isCond2" >Use of *ngIf Directive with condition 2</h2>
+<div *ngIf="isCond3;then truepart;else falsepart"></div>
+
+<ng-template #truepart>This is true part</ng-template>
+<ng-template #falsepart>This is false part</ng-template>
+<hr>
+
+<!-- use of *ngFor -->
+
+<ul>
+    <li *ngFor="let course of courses" [ngClass]="myClass">{{course}}</li>
+</ul>
+<hr>
+ 
+<!-- usd of *ngSwitchCase -->
+
+<!-- <div [ngSwitch]="myCourse">
+    <div *ngSwitchCase="'React'">you have selected react</div>
+    <div *ngSwitchCase="'Angular'">you have selected angular</div>
+    <div *ngSwitchCase="'Python'">you have selected python</div>
+    <div *ngSwitchCase="'Java'">you have selected java</div>
+    <div *ngSwitchDefault>Invalid Choice</div>
+
+</div> -->
+
+<div [ngSwitch]="myCourse">
+    <div *ngFor="let course of courses">
+        <div *ngSwitchCase="course">you have seleted {{course}}</div>
+    </div>
+</div>

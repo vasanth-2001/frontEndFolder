@@ -1,0 +1,128 @@
+11/12/24
+
+ng serve
+
+ng s -o
+
+*Angular :
+    -it is js framework.
+    -it provide desigining and development platform  for creating single page application.
+    -latest version of angular is 18
+    -angular developed and maintain by google
+
+    -s/w pre-requisit
+        -node js
+            node --version
+        -ts
+            tsc -v
+        -angular
+            ng --verion // tocheck there is angular or not
+
+            npm i -g @angular/cli //it will install angular
+            ng new angularProjectName   //create angular project
+
+        *how to create angular project
+        step 1 :ng new projectName
+        step 2: cd projectName
+        step 3 :ng serve or ng s
+        step 4 : go to browser url and write localhost:4200
+
+        -angular work on componenet
+        -component : it is partial part of angular project.
+                     -it contain code for angular project,
+                     -it can be any part of project,which we can reuse multiple time.
+        -in angular root component name is app
+
+        *how to create component in angular
+            -ng generate component componentName   
+            -ng g c componentName
+
+            -when we create component in angular it generate four file 
+                html,css,ts,spec.ts
+
+        -how to get output of individual component.
+        -go to component ts file and copy its selector name and write as tag where you want
+
+        *dataBinding : getting or accessing data from one file to another file in same component
+            1.interpolation {{}} : in this send data from  ts file => html file
+            2.property binding [] : in this we set attribute(property) values ts => html file
+            3.event binding (): in this we send data from html => ts file
+            4.two-way databinding [()] : in this we can send data from ts <=> html
+                -to perform two-way databinding we have ngModel directory but ngModel directive is not part of core angular module it is part formsModule, for this first wwe have to import formsModule in component.ts file import array.
+
+
+    Task 1: create one component with name toggleimage in which on button click you to toggle image.
+    Task 2: create one component with name changeimage in which click on multiple button change image.
+
+
+    *directive in angular
+    -it is use to change appearance and behavior as well as perform DOM Manipulation in angular.
+        -There are three types of directive in angular 
+            1.structural directive: it is use to perform dom manuplation in angular.
+                                    -struictural directive denoted by *
+                                    -structural directives are *ngIf,*ngFor,*ngSwitchCase.
+                                    -we can apply one directive at a time to single element.
+                                    -it is part of common module ,for this we have to import common in component.
+                -ng-template display out on the basis of condition
+                -to create reference variable in angular 
+            2.attribute directive: it is use to change appearance and behavior of DOM
+                -ngStyle: it is use to apply css stylce property on the basis of condition.
+                -ngClass: it is use to apply css class  on the basis of condition.
+                -ngModel: it is use to perform two way databinding.
+
+            3.custom directive :the directive created by developer
+                ng g directive directiveName
+
+    *use of template refference variable
+        
+    *componenet iteraction:
+    accessing data from parent component to child componenet
+    -Input() decorator: it is use to send data from parent componenet to child componenet
+    -Output() decorator: it is use to send data from child componenet to parent componenet
+
+    *Pipes:
+        -it is use to transform property value without changing its original value.
+        -it is denoted by | sign
+        -to use pipe first we have to import common module in our component
+        -There are three types of Pipes in angular:
+            1.inbuild pipe:pipe provided by angular 
+            2.custom pipe:pipe created by developer for particular use.
+            3.thirdparty pipe:pipes already developed by third party vender,first we have to install it and then use it.
+
+            1.inbulit pipe:
+                -string pipe
+                -json pipe
+                -number pipe
+                -currency pipe
+                -date pipe
+            2.custom pipe:
+            *how to create custom pipe
+            ng generate pipe pipeName
+            ng generate pipe shared/customPipe/cube
+
+            Task: create one custom pipe with name square which will return the square of any number.
+
+            *how to use bootstrap in angular
+                step 1: npm i bootstrap
+                step 2: go to angular.json file and in its style array import its path
+                step 3: restart angular project
+
+                layout folder
+                Nav,pagenotfound,maindahboard,footer,login
+                   ng g c layout/nav
+
+                Form folder
+                angform,utdf,rtf,
+                    ng g c forms/angform
+
+            *Routing in Angular:
+                -navigation of component
+                -to display componenet output or navigating component by using routing  in angular for it we write code in app.routes.ts file
+                -in angular all routing componenet will display its output bellow <router-outlet>
+                
+                1.naming routing :
+                2.default routing:
+                3.re-direct routing:
+                4.parameterize routing:
+                5.child routing:
+                6:wild-card routing: 

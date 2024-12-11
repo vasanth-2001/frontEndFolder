@@ -23,7 +23,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title>Meet the Owner</Card.Title>
                 <Card.Text>
-                  [Owner Name] has been in the jewelry business for over 30 years. With a deep passion for fine craftsmanship, they have built this shop into a trusted brand.
+                  Vasanth has been in the jewelry business for over 30 years. With a deep passion for fine craftsmanship, they have built this shop into a trusted brand.
                 </Card.Text>
               </Card.Body>
             </Card>

@@ -29,31 +29,31 @@ import Contact from './JwelleryShop/Contact';
 
 function App() {
   return (
-//     <Router>
-//     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-//         <Container>
-//           <Navbar.Brand as={Link} to="/">Jewelry Shop</Navbar.Brand>
-//           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//           <Navbar.Collapse id="responsive-navbar-nav">
-//             <Nav className="ml-auto">
-//               <Nav.Link as={Link} to="/">Home</Nav.Link>
-//               <Nav.Link as={Link} to="/about">About</Nav.Link>
-//               <Nav.Link as={Link} to="/products">Products</Nav.Link>
-//               <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-//             </Nav>
-//             <Button variant="outline-light" className="ml-3">Login</Button>
-//           </Navbar.Collapse>
-//         </Container>
-//       </Navbar>
+    <Router>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand as={Link} to="/"> SRR Jewelry</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/products">Products</Nav.Link>
+              <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            </Nav>
+            {/* <Button variant="outline-light" className="ml-3">Login</Button> */}
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-//     <Routes>
-//       <Route exact path="/" element={<Home/>} />
-//       <Route path="/about" element={<About/>} />
-//       <Route path="/products" element={<Products/>} />
-//       <Route path="/contact" element={<Contact/>} />
-//     </Routes>
-//   </Router>
-// );
+    <Routes>
+      <Route exact path="/" element={<Home/>} />
+      <Route path="/about" element={<About/>} />
+      <Route path="/products" element={<Products/>} />
+      <Route path="/contact" element={<Contact/>} />
+    </Routes>
+  </Router>
+);
 
     <div className="App">
       <header className="App-header">
@@ -102,7 +102,7 @@ function App() {
       {/* <MyNameComp/> */}
       
     </div>
-  ); 
+  // ); 
 }
 
 export default App;

@@ -1,0 +1,17 @@
+.txtPrimary{
+    color:dodgerblue;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.txtDanger{
+    color: blue;
+    font-weight: 700;
+    text-transform: titlecase;
+    font-size: 15px;
+}
+.special:hover{
+    color: brown;
+    background-color: aqua;
+    font-size: 35px;
+}
