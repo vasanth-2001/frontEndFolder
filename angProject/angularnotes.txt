@@ -126,3 +126,60 @@ ng s -o
                 4.parameterize routing:
                 5.child routing:
                 6:wild-card routing: 
+
+=============================================================================================================
+12/12/24:
+
+*how to navigate in angular
+    -to perform component navigtation we have to use routerLink property with anchor tag,
+    but first we have to import routerLink in componenet ts file from "@angular/router" library.
+
+*angular form 
+    -there are two types of form 
+        1.UTDF(user template deriven form):
+            -when we have create simple form validation in that case we use it.
+            -to perform validation we have to use ngModl directory with input element
+            -in this ngForm directory will hold data of all input element in it.
+        2.RTF(Reactive Template Form):
+            -whenwe have to write complete logic to perform form validation in thst case we use it.
+            -to use rtf form validationwe first we have to import ReactiveFormModule from FormsModule in componenet.
+            -in rtf we write form validation code in ts file.
+            -in this we use mainly two classes 1.FormGroup 2.FormControl.
+            -FormGroup : it will hold information of all input element.
+            -FormControl : it will hold information of individual input element
+
+
+*Service in Angular 
+    -in angular service is special class with extra power.
+    -it is use for multiple uses
+        1. to share data with multiple componenet.
+        2. we can implement bussiness logic in it.
+        3. we can perform external communication(database connection)
+
+    *how to create saervice
+        ng g service serviceName
+        ng g service shared/services/dbservice
+
+
+        *how to access data from service into angular componenet
+            -if you want to service data into angular for this first we have import service in component ts file and
+             create instance of service class. 
+
+
+        *REST Fake API
+            -CRUD
+
+            cd src/app/shared/database(enter)
+            json-server --watch -p 8888 db.json(enter)
+
+
+            *how to make API request from Angular to server
+                -to send request from angular service to server for this we have to create instance of HttpClient class
+                 in service constructor,but HttpClient class is not part of core angular it is part of HttpClientModule,so first we have to import 
+                 HttpClientModule module,so first we have to import provideHttpClient as well as withJsonSupport in app.config.ts and
+                  make entry of these library in provider array.
+                 
+
+                 ng g c crud/productdash
+                 ng g c crud/productadd
+                 ng g c crud/productedity=

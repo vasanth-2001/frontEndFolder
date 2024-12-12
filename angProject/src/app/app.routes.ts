@@ -8,6 +8,10 @@ import { UtdfComponent } from './forms/utdf/utdf.component';
 import { RtfComponent } from './forms/rtf/rtf.component';
 import { MaindashboardComponent } from './layout/maindashboard/maindashboard.component';
 import { ParentComponent } from './parent/parent.component';
+import { ItemComponent } from './item/item.component';
+import { ProductdashComponent } from './crud/productdash/productdash.component';
+import { ProductaddComponent } from './crud/productadd/productadd.component';
+import { ProducteditComponent } from './crud/productedit/productedit.component';
 
 export const routes: Routes = [
     // 2. default routing
@@ -20,6 +24,7 @@ export const routes: Routes = [
     {
         path: "maindashboard", component: MaindashboardComponent, children: [
             {path:"parent",component:ParentComponent},
+            {path:"item",component:ItemComponent},
             { path: "databinding", component: DatabindingComponent },
 
             // 4. parameterize routing
@@ -32,6 +37,11 @@ export const routes: Routes = [
                     { path: "rtf", component: RtfComponent },
                 ]
             },
+            {
+                path:"dash",component:ProductdashComponent
+            },
+            {path:"add",component:ProductaddComponent},
+            {path:"edit/:id",component:ProducteditComponent},
         ]
     },
 

@@ -1,1 +1,33 @@
 <p>rtf works!</p>
+
+
+
+
+<form [formGroup]="empForm" (ngSubmit)="getData()" class="box">
+    <div>
+        <label >Enter your first Name</label>
+        <input type="text" name="fname" formControlName="fname" class="form-control" >
+        <div *ngIf="empForm.get('fname').touched && empForm.get('fname').invalid">
+           <div *ngIf="empForm.get('fname').errors.required" class="alert alert-danger">fname is required</div> 
+           <div *ngIf="empForm.get('fname').errors.pattern" class="alert alert-danger">fname must contain min 3 letters and max 20 letters</div> 
+        </div>
+    </div>
+    <div>
+        <label >Enter your last Name</label>
+        <input type="text" name="lname" formControlName="lname" class="form-control" >
+        <div *ngIf="empForm.get('lname').touched && empForm.get('lname').invalid">
+           <div *ngIf="empForm.get('lname').errors.required" class="alert alert-danger">lname is required</div> 
+           <div *ngIf="empForm.get('lname').errors.pattern" class="alert alert-danger">fname is required</div> 
+        </div>
+    </div>
+    <label class="form-check-label">
+        <input type="checkbox" name="term" formControlName="term" class="form-check-input">
+        I Accept term and Condition
+    </label>
+    <div *ngIf="empForm.get('term').touched && empForm.get('term').invalid">
+        <div *ngIf="empForm.get('term').errors.required" class="alert alert-danger">please accept terma and condition</div> 
+        <!-- <div *ngIf="empForm.get('term').erroes.pattern" class="alert alert-danger">fname is required</div>  -->
+     </div> <br>
+     <button type="submit">submit</button>
+    
+</form>
