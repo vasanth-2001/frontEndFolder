@@ -182,4 +182,46 @@ ng s -o
 
                  ng g c crud/productdash
                  ng g c crud/productadd
-                 ng g c crud/productedity=
+                 ng g c crud/productedity
+===================================================================================================================
+*how to get parameter from browser url
+    how to use concurrently library
+        step 1 : install it
+            npm i -g concurrently
+        step 2 :go to package.json file and in script part write below code.
+
+        "json-server":"cs src/app/shared/database && json-server -watch -p 8888 db.json",
+        "start-dev": "concurrently \"ng serve" \"npm run json-server\"",
+        step 3: terminate all server and terminal
+        step 4 : run =>npm run start-dev 
+
+*guard : in angular guard is use to prevent rendering of routing component
+         it return boolean value either true or false.
+         if it return true  then component will render otherwise not.
+
+    *how to generate guard
+    ng g guard guardname
+    ng g guard shared/custguard/auth
+
+
+    *login module
+
+    *how to create built file of angular project
+    ng build 
+*how to check angular build file work properly
+    step 1 :*install library
+    npm install -g angular-http-server
+    step 2: go dist folder path
+    step 3: write bellow command
+            angular-http-server
+
+    *http-angular-server
+    h.w: implement logic for logout
+
+
+    *testing in angular
+    ng test
+
+
+
+    ng g service shared/services/mytestSer

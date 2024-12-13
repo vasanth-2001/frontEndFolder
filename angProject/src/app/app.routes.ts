@@ -12,6 +12,7 @@ import { ItemComponent } from './item/item.component';
 import { ProductdashComponent } from './crud/productdash/productdash.component';
 import { ProductaddComponent } from './crud/productadd/productadd.component';
 import { ProducteditComponent } from './crud/productedit/productedit.component';
+import { authGuard } from './shared/custguard/auth.guard';
 
 export const routes: Routes = [
     // 2. default routing
@@ -22,13 +23,14 @@ export const routes: Routes = [
     // 1. namming routing
     { path: "login", component: LoginComponent },
     {
-        path: "maindashboard", component: MaindashboardComponent, children: [
+        path: "maindashboard", component: MaindashboardComponent, canActivate:[authGuard],children: [
             {path:"parent",component:ParentComponent},
             {path:"item",component:ItemComponent},
             { path: "databinding", component: DatabindingComponent },
 
             // 4. parameterize routing
             { path: "mypipe/:id", component: MypipesComponent },
+            {path:"edit/:id",component:ProducteditComponent},
 
             // 5.child routing
             {
@@ -41,7 +43,8 @@ export const routes: Routes = [
                 path:"dash",component:ProductdashComponent
             },
             {path:"add",component:ProductaddComponent},
-            {path:"edit/:id",component:ProducteditComponent},
+          
+            
         ]
     },
 

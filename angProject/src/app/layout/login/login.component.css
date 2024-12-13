@@ -1,0 +1,13 @@
+.mainbox{
+    height: 100px;
+    width:100w;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainBox form{
+    border:3px solid blue;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px black;
+}

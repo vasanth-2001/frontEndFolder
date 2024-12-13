@@ -1,1 +1,12 @@
-<p>login works!</p>
+<!-- <p>login works!</p> -->
+
+<div class="mainbox">
+    <form>
+        <label class="form-label">Enter User Id</label>
+        <input type="text" name="uid" class="form-control" [(ngModel)]="uid">
+       
+        <label class="form-label">Enter User Password</label>
+        <input type="text" name="upass" class="form-control" [(ngModel)]="upass">
+        <button type="button" (click)="checkUser()" class="btn btn-primary">login</button>
+    </form>
+</div>
