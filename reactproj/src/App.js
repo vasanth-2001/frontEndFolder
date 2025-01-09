@@ -19,7 +19,7 @@ import MultipleImgComp from './task/MutlipleImgComp';
 import ToggleImgComp from './task/ToggleImgComp';
 import MyNameComp from './testing/MyNameComp';
 
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import Home from './JwelleryShop/Home';
@@ -29,34 +29,34 @@ import Contact from './JwelleryShop/Contact';
 
 function App() {
   return (
-    <Router>
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand as={Link} to="/"> SRR Jewelry</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto">
-              <Nav.Link as={Link} to="/">Home</Nav.Link>
-              <Nav.Link as={Link} to="/about">About</Nav.Link>
-              <Nav.Link as={Link} to="/products">Products</Nav.Link>
-              <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-            </Nav>
-            {/* <Button variant="outline-light" className="ml-3">Login</Button> */}
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+//     <Router>
+//     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+//         <Container>
+//           <Navbar.Brand as={Link} to="/"> SRR Jewelry</Navbar.Brand>
+//           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+//           <Navbar.Collapse id="responsive-navbar-nav">
+//             <Nav className="ml-auto">
+//               <Nav.Link as={Link} to="/">Home</Nav.Link>
+//               <Nav.Link as={Link} to="/about">About</Nav.Link>
+//               <Nav.Link as={Link} to="/products">Products</Nav.Link>
+//               <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+//             </Nav>
+//             {/* <Button variant="outline-light" className="ml-3">Login</Button> */}
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
 
-    <Routes>
-      <Route exact path="/" element={<Home/>} />
-      <Route path="/about" element={<About/>} />
-      <Route path="/products" element={<Products/>} />
-      <Route path="/contact" element={<Contact/>} />
-    </Routes>
-  </Router>
-);
+//     <Routes>
+//       <Route exact path="/" element={<Home/>} />
+//       <Route path="/about" element={<About/>} />
+//       <Route path="/products" element={<Products/>} />
+//       <Route path="/contact" element={<Contact/>} />
+//     </Routes>
+//   </Router>
+// );
 
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -69,7 +69,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
       {/* <h1> Welcome to India</h1>
       <FuncComp fname="vasanth" post="Developer"/>
       <VasanthFunCom fname="Nithish" lname="Kumar" salary={98000} gender="Male" address="UK" />
@@ -96,13 +96,13 @@ function App() {
       <UserComp user="Vishwa"/>
       </ErrorBoundaryComp> */}
       {/* <VirtualDOM/> */}
-      {/* <EmpDetailsComp></EmpDetailsComp>
-      <MultipleImgComp></MultipleImgComp>
-      <ToggleImgComp></ToggleImgComp> */}
+      {/* <EmpDetailsComp></EmpDetailsComp> */}
+      {/* <MultipleImgComp></MultipleImgComp> */}
+      {/* <ToggleImgComp></ToggleImgComp> */}
       {/* <MyNameComp/> */}
       
     </div>
-  // ); 
+  ); 
 }
 
 export default App;

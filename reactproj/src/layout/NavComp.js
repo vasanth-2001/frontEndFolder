@@ -23,6 +23,7 @@ const NavComp = () => {
     {/* <Link to="productedit" className='btn btn-warning btn-sm'>ProductEdit</Link> */}
     <Link to="carousal" className='btn btn-primary btn-sm' >My Carousal</Link>{" "}
     <Link to="datalist" className='btn btn-primary btn-sm' >DataList</Link>
+    <Link to="authordash" className='btn btn-primary btn-sm' >AuthorDash</Link>{" "}
     <Link    onClick={()=>logoutUser()} className='btn btn-danger btn-sm' style={{float:"right"}} >
     <LogoutIcon/>
     </Link>

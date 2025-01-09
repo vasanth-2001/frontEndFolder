@@ -2,7 +2,8 @@ import axios from "axios";
 
 //create axios object with basic configuration
 const axiosHttp = axios.create({
-    baseURL:window.location.hostname.includes("localhost")? "http://localhost:8080":"http://www.google.com"
+    // baseURL:window.location.hostname.includes("localhost")? "http://localhost:8080":"http://www.google.com"
+    baseURL:"http://127.0.0.1:8000"
 });
 
 // create interceptor for request
@@ -12,7 +13,7 @@ axiosHttp.interceptors.request.use(
         return{
             ...config,
             headers:{
-                ...axios(token && {'Authorization':`Bearer ${sessionStorage.getItem("accessToken")}`}),
+                ...(token && {'Authorization':`Bearer ${sessionStorage.getItem("accessToken")}`}),
                 ...config.headers
             }
         }

@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'
 const ProtectedRouting = ({Component}) => {
     const nav=useNavigate();
     useEffect(()=>{
-        if(!sessionStorage.getItem("user")){
+        // if(!sessionStorage.getItem("jwtToken")){  //  if(!sessionStorage.getItem("user")){ 
+        if(!sessionStorage.getItem("accessToken")){  //  if(!sessionStorage.getItem("user")){ 
           nav("/");
         }
     })
