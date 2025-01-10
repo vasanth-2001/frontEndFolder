@@ -1,104 +1,261 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
+// import { GET } from "../../shared/service/HTTP.Service"; 
+
+// const AuthorAddComp = () => {
+//   const [authors, setAuthors] = useState([]);
+//   const [error, setError] = useState(null);
+
+//   const fetchAuthors = () => {
+//     // const token = sessionStorage.getItem("jwtToken"); 
+//     // if (!token) {
+//     //   setError("User not authenticated. Please log in.");
+//     //   return;
+//     // }
+
+//     // const headers = {
+//     //   Authorization: `Bearer ${token}`, 
+//     // };
+
+//     GET("/api/author/")
+//       .then((res) => {
+//         console.log("Fetched authors: ", res.data);
+//         setAuthors(res.data);
+//       })
+//       .catch((err) => {
+//         console.error("Error fetching authors: ", err);
+//         setError("Failed to fetch authors. Please try again.");
+//       });
+//   };
+
+//   useEffect(() => {
+//     fetchAuthors(); // Fetch authors when the component mounts
+//   }, []);
+
+//   if (error) {
+//     return <div>Error: {error}</div>;
+//   }
+
+//   return (
+//     <div>
+//       <h1>Authors</h1>
+//       {authors.length > 0 ? (
+//         <table border="1" cellPadding="10" cellSpacing="0" style={{ width: "100%", textAlign: "left" }}>
+//           <thead>
+//             <tr>
+//               <th>ID</th>
+//               <th>First Name</th>
+//               <th>Last Name</th>
+//               <th>Age</th>
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {authors?.map((author) => (
+//               <tr key={author.id}>
+//                 <td>{author.id}</td>
+//                 <td>{author.first_name}</td>
+//                 <td>{author.last_name}</td>
+//                 <td>{author.age}</td>
+//               </tr>
+
+              
+//             ))}
+//           </tbody>
+//         </table>
+//       ) : (
+//         <p>No authors found.</p>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default AuthorAddComp;
+
+
+
+
+
+
+
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+import AddIcon from "@mui/icons-material/Add";
+import { Modal, Button } from "react-bootstrap";
+import { DELETE, GET } from "../../shared/service/HTTP.Service";
 
 const AuthorAddComp = () => {
-    const nav = useNavigate();
-    const [author, setAuthor] = useState({
-        first_name: "",
-        last_name: "",
-        age: ""
-    });
+  const [authors, setAuthors] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedAuthor, setSelectedAuthor] = useState(null);
+  const [show, setShow] = useState(false);
 
-    const getAuthToken = () => {
-        return localStorage.getItem('jwtToken');
-    };
+  // Fetch authors from the API
+  const fetchAuthors = () => {
+    setLoading(true);
+    
+      GET("/api/author/")
+      .then((res) => {
+        setAuthors(res.data)    ;
+        setError(null);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching authors: ", err);
+        setError("Failed to fetch authors. Please try again.");
+        setLoading(false);
+      });
+  };
 
-    const inputChangeHandler = (event) => {
-        const { name, value } = event.target;
-        setAuthor({ ...author, [name]: value });
+  // Delete an author by ID
+  const deleteAuthor = (id) => {
+    console.log(id);
+    
+    if (window.confirm(`Are you sure you want to delete author ID: ${id}?`)) {
+      
+        DELETE(`/api/author/${id}/`)
+        .then(() => {
+          alert("Author deleted successfully.");
+          fetchAuthors(); // Refresh the author list
+        })
+        .catch((err) => {
+          console.error("Error deleting author: ", err);
+          alert("Failed to delete the author. Please try again.");
+        });
     }
+  };
 
-    const addAuthor = async (event) => {
-        event.preventDefault();
-        try {
-            console.log('Sending data:', author); 
-            const response = await axios.post(
-                'http://localhost:8000/api/authors/',
-                author,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${getAuthToken()}`,
-                        'Content-Type': 'application/json'
-                    }
-                }
-            );
+  // Open the modal with selected author details
+  const handleShow = (author) => {
+    setSelectedAuthor(author);
+    setShow(true);
+  };
 
-            if (response.data.status === 201) {
-                window.alert(response.data.message);
-                nav('/authors');
-            }
-        } catch (error) {
-            window.alert(error.response?.data?.message || "Failed to add author");
-        }
-    }
+  // Close the modal
+  const handleClose = () => {
+    setShow(false);
+    setSelectedAuthor(null);
+  };
 
-    return (
-        <div>
-            <h2 className="mb-4">Add New Author</h2>
-            <div className='row'>
-                <div className='col-sm-3'></div>
-                <div className='col-sm-6'>
-                    <form onSubmit={addAuthor}>
-                        <div className="mb-3">
-                            <label className='form-label'>First Name:</label>
-                            <input
-                                type='text'
-                                name='first_name'
-                                onChange={inputChangeHandler}
-                                value={author.first_name}
-                                className='form-control'
-                                maxLength="20"
-                                required
-                            />
-                        </div>
+  // Fetch authors on component mount
+  useEffect(() => {
+    fetchAuthors();
+  }, []);
 
-                        <div className="mb-3">
-                            <label className='form-label'>Last Name:</label>
-                            <input
-                                type='text'
-                                name='last_name'
-                                onChange={inputChangeHandler}
-                                value={author.last_name}
-                                className='form-control'
-                                maxLength="20"
-                                required
-                            />
-                        </div>
+  if (loading) {
+    return <div>Loading authors...</div>;
+  }
 
-                        <div className="mb-3">
-                            <label className='form-label'>Age:</label>
-                            <input
-                                type='number'
-                                name='age'
-                                onChange={inputChangeHandler}
-                                value={author.age}
-                                className='form-control'
-                                min="0"
-                                max="150"
-                                required
-                            />
-                        </div>
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-                        <button type='submit' className='btn btn-primary'>
-                            Add Author
-                        </button>
-                    </form>
-                </div>
-                <div className='col-sm-3'></div>
-            </div>
-        </div>
-    );
-}
+  return (
+    <div>
+      <h1>Authors</h1>
+      <Link to="/mainDashboard/authoradd" className="btn btn-primary mb-3">
+        <AddIcon /> Add Author
+      </Link>
+      {authors.length > 0 ? (
+        <table
+          border="1"
+          cellPadding="10"
+          cellSpacing="0"
+          style={{ width: "100%", textAlign: "left" }}
+        >
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+              <th>Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {authors.map((author, index) => (
+              <tr key={author.id}>
+                <td>{index + 1}</td>
+                <td>{author.first_name}</td>
+                <td>{author.last_name}</td>
+                <td>{author.age}</td>
+                <td>
+                {author.image ? (
+                  <img src={author.image} alt="Profile" width="10vw" />
+                ) : (
+                  "No Image"        
+                )}
+              </td>
+
+                <td>
+                  {/* View Author Details */}
+                  <button
+                    type="button"
+                    className="btn btn-outline-info btn-sm"
+                    onClick={() => handleShow(author)}
+                  >
+                    <VisibilityIcon />
+                  </button>
+                  &nbsp;
+                  {/* Edit Author */}
+                  <Link
+                    to={`/mainDashboard/authoredit/${author.id}`}
+                    className="btn btn-outline-success btn-sm"
+                  >
+                    <EditIcon />
+                  </Link>
+                  &nbsp;
+                  {/* Delete Author */}
+                  <button
+                    type="button"
+                    onClick={() => deleteAuthor(author.id)}
+                    className="btn btn-outline-danger btn-sm"
+                  >
+                    <DeleteIcon />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>No authors found.</p>
+      )}
+
+      {/* Modal for viewing author details */}
+      {selectedAuthor && (
+        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>
+              {selectedAuthor.first_name} {selectedAuthor.last_name}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>
+              <strong>First Name:</strong> {selectedAuthor.first_name}
+            </p>
+            <p>
+              <strong>Last Name:</strong> {selectedAuthor.last_name}
+            </p>
+            <p>
+              <strong>Age:</strong> {selectedAuthor.age}
+            </p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
+    </div>
+  );
+};
 
 export default AuthorAddComp;

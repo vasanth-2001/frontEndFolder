@@ -26,7 +26,7 @@ const LoginComp = () => {
       .then(res => {
         console.log("token res: ",res);
         // sessionStorage.setItem("jwtToken",res.data.access);
-        sessionStorage.setItem("accessToken",res.access);
+        sessionStorage.setItem("jwtToken",res?.access);
         nav("/maindashboard");
       })
       .catch(err => console.log("token err: ",err));
